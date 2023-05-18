@@ -2,7 +2,10 @@ public class Cycles {
     public static String listNums(int x) {
         String result = "";
         for (int i = 0; i <= x; i++) {
-            result += i + " ";
+            result += i;
+            if(i!=x){
+                result += " ";
+            }
         }
         return result;
     }
@@ -12,7 +15,7 @@ public class Cycles {
         for (; x >= 0; x--) {
             result += x + " ";
         }
-        return result;
+        return result.substring(0, result.length() - 1);
     }
 
     public static String chet(int x) {
@@ -20,7 +23,7 @@ public class Cycles {
         for (int i = 0; i <= x; i += 2) {
             result += i + " ";
         }
-        return result;
+        return result.substring(0, result.length() - 1);
     }
 
     public static int pow(int x, int y) {
