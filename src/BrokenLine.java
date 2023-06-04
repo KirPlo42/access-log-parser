@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class BrokenLine {
+public class BrokenLine implements Measurable{
     List<CoordinateDot> dots;
 
     BrokenLine(List<CoordinateDot> dots) {
@@ -52,5 +52,9 @@ public class BrokenLine {
             result += Math.sqrt(Math.pow((dots.get(i).x - dots.get(i-1).x), 2) + Math.pow((dots.get(i).y - dots.get(i-1).y), 2));
         }
         return result;
+    }
+
+    public double length(){
+        return lengthByFormula();
     }
 }
