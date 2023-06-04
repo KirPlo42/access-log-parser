@@ -1,4 +1,7 @@
-public class Fraction {
+import java.util.Arrays;
+import java.util.List;
+
+public class Fraction extends Number{
     final int numerator;
     final int divider;
 
@@ -51,4 +54,26 @@ public class Fraction {
         return numerator +
                 "/" + divider;
     }
+
+    @Override
+    public int intValue() {
+        return this.numerator / this.divider;
+    }
+
+    @Override
+    public long longValue() {
+        return this.numerator / this.divider;
+    }
+
+    @Override
+    public float floatValue() {
+        return (float)this.numerator / this.divider;
+    }
+
+    @Override
+    public double doubleValue() {
+        return (double) this.numerator / this.divider;
+    }
+
+
 }

@@ -1,39 +1,31 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Main {
     public static void main(String[] args) throws Exception {
 
-        Fraction f1 = new Fraction(1,3);
-        Fraction f2 = new Fraction(2,5);
-        Fraction f3 = new Fraction(7,8);
-        System.out.println(f1.sum(f2).sum(f3).minus(5));
+        Fraction f1 = new Fraction(3,5);
 
+        List<Double> list1 = new ArrayList<>();
+        list1.add(2.0);
+        list1.add(f1.doubleValue());
+        list1.add(2.3);
+        System.out.println(sumOfArray(list1));
 
+        List<Double> list2 = Arrays.asList(3.6, new Fraction(49, 12).doubleValue(), 3.0, new Fraction(3,2).doubleValue());
+        System.out.println(sumOfArray(list2));
 
+        List<Double> list3 = Arrays.asList(new Fraction(1,3).doubleValue(), 1.0);
+        System.out.println(sumOfArray(list3));
+    }
 
-
-        //Block for students
-        Student vasia = Student.ofName("Vasia");
-        System.out.println(vasia);
-        vasia.setMark(5);
-        vasia.setMark(9);
-        vasia.setMark(2);
-        System.out.println(vasia);
-
-
-        List<Integer> marks = new ArrayList<>();
-        marks.add(4);
-        marks.add(5);
-        Student petya = Student.ofNameAndMarks("Petya", marks);
-        System.out.println(petya);
-        petya.setMark(3);
-        petya.setMark(1);
-        System.out.println(petya);
-        marks.add(1);
-        System.out.println(petya);
-        System.out.println(petya.getMarks());
-
+    public static double sumOfArray(List<Double> list){
+        double result = 0;
+        for (Double el: list){
+            result += el;
+        }
+        return result;
     }
 
 
