@@ -4,7 +4,7 @@ import java.util.List;
 public class BrokenLine {
     List<CoordinateDot> dots;
 
-    public BrokenLine(List<CoordinateDot> dots) {
+    BrokenLine(List<CoordinateDot> dots) {
         this.dots = dots;
     }
 
